@@ -1,0 +1,9 @@
+<svg
+        class="svgclass"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 16 10"
+        aria-hidden="true"
+        width="20px"
+        height="50px"
+      >
