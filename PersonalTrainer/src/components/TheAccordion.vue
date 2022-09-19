@@ -12,7 +12,6 @@
       <img
         src="../assets/pics/upArrow.png"
         alt="error"
-        @click="toggleImgRotate"
         v-bind:style="{ transform: `rotate(${deg}deg)` }"
       />
     </button>
@@ -27,7 +26,9 @@
 .entireAccordion {
   width: 250px;
   height: 100px;
+  margin-bottom: 100px;
 }
+
 .button {
   display: flex;
   flex-direction: row;
@@ -37,11 +38,14 @@
   border: 2px solid black;
   width: 250px;
   transition-duration: 0.3s;
+  background-color: #83c5a7;
 }
 
 .button:hover {
-  background-color: gray;
+  background-color: #7c3a58;
+  color: azure;
 }
+
 img {
   width: 25px;
   height: 30px;
@@ -54,6 +58,7 @@ export default {
   data() {
     return {
       isOpen: false,
+      isActive: false,
     };
   },
 
