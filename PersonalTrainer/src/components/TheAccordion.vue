@@ -25,8 +25,7 @@
 <style scoped>
 .entireAccordion {
   width: 250px;
-  height: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 
 .button {
@@ -39,6 +38,7 @@
   width: 250px;
   transition-duration: 0.3s;
   background-color: #83c5a7;
+  position: relative;
 }
 
 .button:hover {
@@ -59,6 +59,7 @@ export default {
     return {
       isOpen: false,
       isActive: false,
+      marginBottom: 100,
     };
   },
 

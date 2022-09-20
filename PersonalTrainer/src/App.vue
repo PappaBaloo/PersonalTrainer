@@ -12,13 +12,13 @@ import TheProfileVue from "./components/TheProfile.vue";
       </div>
     </nav>
     <div class="search_filter_profiles">
+      <form action="" method="get" class="form">
+        <input class="searchBar" type="search" placeholder="Search..." />
+        <button type="submit" class="search-button">
+          <img src="./assets/pics/search.png" alt="error" />
+        </button>
+      </form>
       <div class="search_filters">
-        <form action="" method="get" class="form">
-          <input class="searchBar" type="search" placeholder="Search..." />
-          <button type="submit" class="search-button">
-            <img src="./assets/pics/search.png" alt="error" />
-          </button>
-        </form>
         <div class="accordionGroup">
           <the-accordion-vue class="accordion">
             <template v-slot:title>
@@ -48,7 +48,7 @@ import TheProfileVue from "./components/TheProfile.vue";
             </template>
           </the-accordion-vue>
 
-          <the-accordion-vue>
+          <the-accordion-vue class="accordion2">
             <template v-slot:title>
               <span>Ålder</span>
             </template>
@@ -126,6 +126,7 @@ export default {
   flex-wrap: nowrap;
   justify-content: center;
   border-bottom: 2px solid gray;
+  height: 80px;
 }
 
 .name_logo {
@@ -164,11 +165,12 @@ export default {
   grid-column: 1;
   grid-row: 2;
   margin: 2%;
+  align-items: start;
 }
 
 .search_filters {
   grid-column: 1;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   margin: 1%;
 }
@@ -176,6 +178,7 @@ export default {
 .form {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .searchBar {
@@ -205,7 +208,16 @@ export default {
   margin-top: 20px;
 }
 .accordionGroup {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.fieldGoal {
+  position: relative;
 }
 
 .listClass {

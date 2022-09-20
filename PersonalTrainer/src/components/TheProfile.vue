@@ -1,7 +1,9 @@
 <script setup></script>
 
 <template>
-  <div class="box"></div>
+  <div class="boxGroup">
+    <div class="box"></div>
+  </div>
 </template>
 
 <style scoped>
@@ -16,6 +18,9 @@
   border: 2px solid black;
   box-shadow: #83c5a7 0px 54px 55px, #83c5a7 0px -12px 30px, #83c5a7 0px 4px 6px,
     #83c5a7 0px 12px 13px, #83c5a7 0px -3px 5px;
+}
+
+.boxGroup {
 }
 </style>
 
