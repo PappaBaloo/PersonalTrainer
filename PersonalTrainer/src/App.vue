@@ -115,7 +115,7 @@ export default {
 <style scoped>
 .all {
   display: grid;
-  grid-template-rows: 0.4fr 1.6fr;
+  grid-template-rows: auto 1fr;
   width: 100%;
   height: 100%;
   margin: 0%;
@@ -140,7 +140,7 @@ export default {
   padding: 1%;
   background-color: #83c5a7;
   color: black;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 8px;
   transition-duration: 0.4s;
   text-align: center;
