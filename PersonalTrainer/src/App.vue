@@ -12,88 +12,90 @@ import TheProfileVue from "./components/TheProfile.vue";
       </div>
     </nav>
     <div class="search_filter_profiles">
-      <form action="" method="get" class="form">
-        <input class="searchBar" type="search" placeholder="Search..." />
-        <button type="submit" class="search-button">
-          <img src="./assets/pics/search.png" alt="error" />
-        </button>
-      </form>
-      <div class="search_filters">
-        <div class="accordionGroup">
-          <the-accordion-vue class="accordion">
-            <template v-slot:title>
-              <span>Mål av träning</span>
-            </template>
-            <template v-slot:content>
-              <fieldset class="fieldGoal">
-                <ul>
-                  <li class="listClass">
-                    <label for=""><input type="checkbox" /></label>
-                    <span>Förlora fett</span>
-                  </li>
-                  <li class="listClass">
-                    <label for=""><input type="checkbox" /></label>
-                    <span>Öka muskelmassa</span>
-                  </li>
-                  <li class="listClass">
-                    <label for=""><input type="checkbox" /></label>
-                    <span>Bättre kondition</span>
-                  </li>
-                  <li class="listClass">
-                    <label for=""><input type="checkbox" /></label>
-                    <span>Bättre boxning</span>
-                  </li>
-                </ul>
-              </fieldset>
-            </template>
-          </the-accordion-vue>
+      <div class="fixingPosition">
+        <form action="" method="get" class="form">
+          <input class="searchBar" type="search" placeholder="Search..." />
+          <button type="submit" class="search-button">
+            <img src="./assets/pics/search.png" alt="error" />
+          </button>
+        </form>
+        <div class="search_filters">
+          <div class="accordionGroup">
+            <the-accordion-vue class="accordion">
+              <template v-slot:title>
+                <span>Goal for training</span>
+              </template>
+              <template v-slot:content>
+                <fieldset class="fieldGoal">
+                  <ul>
+                    <li class="listClass">
+                      <label><input value="1" type="checkbox" /></label>
+                      <span>Burn fat/Lose weight</span>
+                    </li>
+                    <li class="listClass">
+                      <label><input value="2" type="checkbox" /></label>
+                      <span>Grow muscles</span>
+                    </li>
+                    <li class="listClass">
+                      <label><input value="3" type="checkbox" /></label>
+                      <span>Improve endurance</span>
+                    </li>
+                    <li class="listClass">
+                      <label><input value="4" type="checkbox" /></label>
+                      <span>Better boxing</span>
+                    </li>
+                  </ul>
+                </fieldset>
+              </template>
+            </the-accordion-vue>
 
-          <the-accordion-vue class="accordion2">
-            <template v-slot:title>
-              <span>Ålder</span>
-            </template>
-            <template v-slot:content>
-              <fieldset>
-                <div class="agewrapper">
-                  <header>
-                    <span>Använd slider eller skriv in min och max ålder</span>
-                  </header>
-                  <div class="ålderInput">
-                    <div class="field">
-                      <span>Min</span>
-                      <input type="number" class="inputMin" value="18" />
-                    </div>
-                    <div class="seperator">-</div>
-                    <div class="field">
-                      <span>Max</span>
-                      <input type="number" class="inputMax" value="80" />
-                    </div>
-                    <div class="slider">
-                      <div class="progress"></div>
-                    </div>
-                    <div class="range-input">
-                      <input
-                        type="range"
-                        class="range-min"
-                        min="18"
-                        max="80"
-                        value="18"
-                      />
-                    </div>
-                    <div class="range-input">
-                      <input
-                        type="range"
-                        class="range-max"
-                        min="18"
-                        max="80"
-                        value="80"
-                      />
+            <the-accordion-vue class="accordion2">
+              <template v-slot:title>
+                <span>Age Range</span>
+              </template>
+              <template v-slot:content>
+                <fieldset>
+                  <div class="agewrapper">
+                    <header>
+                      <span>Use slider or enter min/max age</span>
+                    </header>
+                    <div class="ålderInput">
+                      <div class="field">
+                        <span>Min</span>
+                        <input type="number" class="inputMin" value="18" />
+                      </div>
+                      <div class="seperator">-</div>
+                      <div class="field">
+                        <span>Max</span>
+                        <input type="number" class="inputMax" value="80" />
+                      </div>
+                      <div class="slider">
+                        <div class="progress"></div>
+                      </div>
+                      <div class="range-input">
+                        <input
+                          type="range"
+                          class="range-min"
+                          min="18"
+                          max="80"
+                          value="18"
+                        />
+                      </div>
+                      <div class="range-input">
+                        <input
+                          type="range"
+                          class="range-max"
+                          min="18"
+                          max="80"
+                          value="80"
+                        />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </fieldset>
-            </template>
-          </the-accordion-vue>
+                </fieldset>
+              </template>
+            </the-accordion-vue>
+          </div>
         </div>
       </div>
       <div class="profiles">
@@ -127,6 +129,7 @@ export default {
   justify-content: center;
   border-bottom: 2px solid gray;
   height: 80px;
+  margin-bottom: 4%;
 }
 
 .name_logo {
@@ -168,6 +171,10 @@ export default {
   align-items: start;
 }
 
+.fixingPosition {
+  position: fixed;
+  left: 5%;
+}
 .search_filters {
   grid-column: 1;
   display: flex;

@@ -44,6 +44,7 @@
 .button:hover {
   background-color: #7c3a58;
   color: azure;
+  cursor: pointer;
 }
 
 img {
